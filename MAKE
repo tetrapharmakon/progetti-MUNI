@@ -1,0 +1,1 @@
+lualatex -pdf $1
