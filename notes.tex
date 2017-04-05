@@ -1,0 +1,175 @@
+\documentclass[a4paper,12pt]{amsart}
+
+\input{preambolo}
+\usepackage{kodi}
+
+\usetikzlibrary{arrows}
+\title{A categorical trinitarism}
+\author{Moi}
+\begin{document}
+\maketitle
+\epigraph{
+\textgreek{
+Ὡσαύτως καὶ αἱ τρεῖς ἡμέραι πρὸ τῶν φωστήρων γεγονυῖαι τύποι εἰσὶν τῆς τριάδος, τοῦ θεοῦ καὶ τοῦ λόγου αὐτοῦ καὶ τῆς σοφίας αὐτοῦ. τετάρτῳ δὲ τόπῳ ἐστὶν ἄνθρωπος ὁ προσδεὴς τοῦ φωτός, ἵνα ᾖ θεός, λόγος, σοφία, ἄνθρωπος. διὰ τοῦτο καὶ τετάρτῃ ἡμέρᾳ ἐγενήθησαν φωστῆρες.}}{Theophilus of Antioch, To Autolycus, \textsc{ii.xv}}
+Every elementary categorical construction is subsumed by the notion of co/limit. This is not true any more for \emph{enriched} categories, where a more general notion is needed to capture the intrisic `two-dimensionality' of the theory.
+
+The best we can do, in an enriched/higher setting, is to appeal the \textsc{kwc} \emph{trinitarism} that defines Kan extension, weighted co/limits and co/ends. The plan of this first introductory lecture is to give a minimal amount of definitions in order to establish a language which will be useful later on.
+
+These concepts (co/ends, especially) offer powerful computational tools. The daunting task of learning abstract homotopy theory will be relieved letting these machineries formally produce fairly involved results.
+\section{Kan extensions}
+\begin{definition}
+Let 
+\[
+\xymatrix{
+	\C \ar[r]^F\ar[d]_G& \D \\
+	\cate{E}
+}
+\]
+be a diagram of categories and functors; a \emph{left Kan extension} of $F$ along $G$ is a functor, denoted $\Lan_GF$, endowed with a natural transformation $\eta\colon F \Rightarrow \Lan_GF\circ G$, initial among these natural transformations.
+
+This means that whenever another natural transformation $\alpha \colon F \Rightarrow KG$ is given, there is a unique natural transformation $\bar\alpha \colon \Lan_GF\Rightarrow K$ such that $\alpha = \eta \circ \bar\alpha_G$.
+\end{definition}
+The situation is depicted in the following diagram:
+\[
+\xymatrix@R=1.5cm@C=1.5cm{
+	\C \ar[r]^F \ar[d]_G & \D \\
+	\cate{E} \ar[ur]|{\Lan_GF}\ar@/_2pc/[ur]_K
+	\ar@{=>} (15,-15);(11.5,-11.5)
+	\ar@{=>} (10,-2);(3,-10)
+}
+\]
+We are mainly interested in a slightly less general definition, though. A \emph{pointwise} left Kan extension is a left Kan extension $\Lan_GF$ that is preserved by every representable functor. A rather common situation where a pointwise left Kan extension exists is when the codomain $\D$ of $F$ is cocomplete. In that case not only we find $\Lan_GF$ for \emph{every} $G$, but we are also able to characterize it with a more intuitive universal property: the Kan extensions can be constructed, over each object (a point, in some sense) of the domain category, using a suitable colimit.
+\begin{proposition}
+Let $G^*\colon [\C,\D]\to [\cate{E},\D]$ be the functor induced by precomposition with $G$: then $\Lan_GF$ is the functor that acts, on objects and morphisms, as
+\[
+e\mapsto \varinjlim_{(G\downarrow e)} Fc,
+\]
+where $(G\downarrow e)$ is the \emph{comma category} of arrows $Gc\to e$ and morphisms $c \to c'$ such that the obvious triangle commutes.
+
+Moreover, the correspondence $\Lan_G(\firstblank)\colon [\C,\D]\leftarrow [\cate{E},\D]$ that sends $F\mapsto \Lan_GF$ is the left adjoint of $G^*$ that sends $H$ to $HG$.
+\end{proposition}
+\begin{proof}
+A slightly more formal rephrasing of the above isomorphism is the following: consider the composition of functors
+\[
+\xymatrix{
+	(G\downarrow e) \ar[r]^\Sigma & \C \ar[r]^F & \D
+}
+\]
+then the colimit
+\[
+\varinjlim_{(c, \alpha : Gc \to e)\in(G\downarrow e)} F(\Sigma(c, \alpha))
+\]
+of this diagram on $\D$ is precisely the value of $\Lan_GF(e)$ which is then computed \emph{pointwise}.
+
+To prove the statement,we build an explicit natural isomorphism
+\[
+\Nat(F,HG)\overset{\Psi}{\underset{\Phi}\leftrightarrows} \Nat(\Lan_GF,H).
+\]
+First of all we define a map $\Phi$, sending $\eta\colon F \to HG$ to the cocone with components
+\[
+\xymatrix{
+	**[l] \hat{\eta}_{c,\alpha} \colon Fc \ar[r]^{\eta_c} & HGc \ar[r]^{H\alpha} & Hc
+}
+\]
+This induces (via the universal property of the colimit) a unique map
+\[
+\varinjlim_{(G\downarrow e)} Fc \xto{\qquad \Phi(\eta)_e\qquad} He
+\]
+which is a natural transformation in $e$, since the square
+\[
+\xymatrix{
+	\displaystyle \varinjlim_{(G\downarrow e)} Fc \ar[r]\ar[d]& He \ar[d]\\
+	\displaystyle \varinjlim_{(G\downarrow e)} Fc \ar[r] & He'
+}
+\]
+commutes for $f\colon e\to e'$.
+
+On the other hand we define $\Psi$ taking the components $\beta_e \colon \beta\colon \varinjlim_{(G\downarrow e)} Fc \to He$ and considering the compositions
+\[
+\xymatrix@C=1.5cm{
+	\varinjlim_{(G\downarrow x)} Fc \ar[r] & HGx \ar[dd]\\
+	Fx\ar[dd]\ar[ur]\ar[u]^{\iota_{(x, 1_{Gx})}} & \\
+	& HGy\\
+	Fy \ar[ur] \ar[r]_{\iota_{(y, 1_{Gy})}}& \ar[u] \varinjlim_{(G\downarrow y)} Fc \\
+}
+\]
+The inner square commutes, and proves naturality in $x\to y$; the reason is that it splits into two sub-diagrams, each of which commutes.
+\end{proof}
+\begin{exercise}
+Dualize; define right Kan extensions $\Ran_GF$ and their universal property (how is the direction of 1-cells affected by the dualization?); define pointwise right Kan extensions and show a similar adjunction formula
+\[
+\Nat(HG,F)\cong \Nat(H, \Ran_GF).
+\]
+\end{exercise}
+\subsection{Examples}
+\begin{example}
+Let $H\le G$ a group inclusion, regarded as a functor. The category of (left) $G$-sets is identified with the category of functors $[G,\Sets]$. 
+
+There exist then functors
+\[
+npoiapofa
+\]
+given by Kan extension. Their action on objects and morphisms is given by
+\[
+fdsnpaia
+\]
+\end{example}
+The following is a standard statement that is often subsumed by the sentence `any functor $F$ defined on presheaves on $\C$ is uniquely determined by its action on representables'.
+\begin{example}
+Let $F:\C \to \D$ be a functor from a \emph{small} to a \emph{cocomplete} category; then there is a unique way to define a functor $\bar F : [\C^\text{op}, \Sets] \to \D$ that commutes with colimits, and that has a right adjoint $N_F$ sending an object $d\in\D$ into the functor $c\mapsto \hom(Fc,d)$. 
+
+This left adjoint sends a presheaf $P$ into the object $\Lan_yF(P)$ in $\D$.
+\end{example}
+\begin{proof}
+It is enough to show that a natural transformation $\alpha\colon P \to N_F(d)$ determines a cocone for $(y\downarrow P) \to \C \overset{F}\to \D$: but from the commutativity of the square
+\[
+\xymatrix{
+	c \ar[d]&  Pc & \hom(Fc,d)\\
+	c' & Pc' & \hon(Fc',d)
+}
+\]
+it follows that the triangle
+\[
+\xymatrix{
+	Fc && Fc' \\
+	&d&
+}
+\]
+commutes, and then sending $(c, x\in Pc)$ into $\alpha_c(x) \colon Fc \to d$ determines a cocone for $FU$. This concludes the proof.
+\end{proof}
+\begin{exercise}
+Show that $\Lan_1F\cong F$ and $\Ran_1F\cong F$, for every functor $F\colon \A\to \B$ (use the universal property).
+\end{exercise}
+\begin{exercise}
+Show that if $F\colon \A\to\B$, $\A$ is small, $F$ is cocontinuous and $\B$ is cocomplete, then $\Lan_F1$ (where $1\colon \B\to\B$ is the identity functor) is a left adjoint for $F$.
+\end{exercise}
+\begin{exercise}
+Use the universal property to show that $G\mapsto \Lan_G$ is a pseudofunctor, by showing that for $\A\xto{F}\B, \A\xto{G}\C\xto{H}\D$ there is a uniquely determined laxity cell for composition
+\[
+\Lan_H(\Lan_GF)\cong \Lan_{H\circ G}F.
+\]
+Dualize for right Kan extensions.
+\end{exercise}
+\section{Weighted co/limits}
+The notion of weighted colimit generalizes the notion of colimit to an enriched setting, and provides a fairly formal approach to the issues posed by abstract homotopy theory; it is noticeable that the notion of \emph{homotopy colimit}\footnote{A homotopy colimit is a construction in a model category --not a real colimit-- that corrects the fact that the functor $\varinjlim$ does not preserve weak equivalences.} is captured, under mild assumptions on the model category, by a weighted colimit construction. Thus, the machinery produces a fairly explicit approach to the matter.
+
+When looking for a classical (from now on, `conical') colimit of a diagram $F\colon J \to \C$, we basically are looking for a representative for the functor $a\mapsto \text{Cocones}(F,a)\cong \Nat(F,\Delta a)$, where $\Delta : \C \to \C^J$ is the `constant diagram' functor.
+
+The latter object, that uniquely determines the object $\varinjlim F$, can be rewritten as
+\[
+\Nat(*, \hom(F,a))
+\]
+where now $\hom(F,a)$ is the functor $x\mapsto \hom(Fx,a)$ and $*$ is the terminal presheaf: then
+\[
+\hom(\varinjlim F,a)\cong \Nat(*, \hom(F,a)).
+\]
+A weighted colimit arises answering the following simple question: what happens if we replace the terminal presheaf $*$ with a more general $W\colon \cate{X}^\opp\to \Sets$, and look for a representative of the functor $a\mapsto \Nat(W, \hom(F,a)$? 
+
+If we were able to solve this universal problem, we would obtain a natural isomorphism
+\[
+\hom(\varinjlim{}^W F,a)\cong \Nat(W, \hom(F,a)).
+\]
+for an object $\varinjlim{}^W F$ that we call the colimit of $F$ weighted by $W$.
+\subsection{Examples}
+\section{Co/ends}
+\end{document}
