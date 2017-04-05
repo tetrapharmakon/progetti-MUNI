@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.19)  5 APR 2017 00:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.19)  6 APR 2017 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2415,46 +2415,82 @@ T1/lmr/m/n/12 (-20) tak-ing the com-po-nents $\OML/lmm/m/it/12 ^^L[] [] [] ^^L
 [] []  [][] Fc \OMS/lmsy/m/n/12 !
  []
 
-<xymatrix 2x4 320> [3] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
+<xymatrix 3x2 278> [3] <xymatrix 2x1 135> <xymatrix 3x1 134> <xymatrix 3x1
+132> <xymatrix 3x2 217> [4] <xymatrix 3x2 149> [5] [6] <xymatrix 2x2 168>
+<xymatrix 2x2 195>
+
+LaTeX Warning: Citation `Graya' on page 7 undefined on input line 250.
+
+<xymatrix 2x2 209> [7]
+Overfull \hbox (15.09293pt too wide) in paragraph at lines 264--268
+[]\T1/lmr/m/n/12 (-20) The op-po-site of the comma cat-e-gory $\OT1/lmr/m/n/12 
+(-20) (\OML/lmm/m/it/12 y \OMS/lmsy/m/n/12 # d\OML/lmm/m/it/12 W\OMS/lmsy/m/n/1
+2 e\OT1/lmr/m/n/12 (-20) )$\T1/lmr/m/n/12 (-20) , where $\OMS/lmsy/m/n/12 d\OML
+/lmm/m/it/12 W\OMS/lmsy/m/n/12 e [] [] f^^Cg !
+ []
+
+
+LaTeX Font Warning: Font shape `T1/lmr/b/sc' undefined
+(Font)              using `T1/lmr/b/n' instead on input line 278.
+
+
+Overfull \hbox (12.37206pt too wide) in paragraph at lines 279--280
+\T1/lmr/m/n/12 (-20) Prop. [], the cat-e-gory $[]  []  \OML/lmm/m/it/12 W$ \T1/
+lmr/m/n/12 (-20) comes equipped with a fi-bra-tion $\OT1/lmr/m/n/12 (-20) ^^F [
+] [] []  []  \OML/lmm/m/it/12 W \OMS/lmsy/m/n/12 !
+ []
+
+[8] [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: CCEAABFBFCC1F62B07DAB7AB22EBF097;277.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 38689 strings out of 493013
- 710012 string characters out of 6137918
- 913719 words of memory out of 5000000
- 41174 multiletter control sequences out of 15000+600000
- 89221 words of font info for 134 fonts, out of 8000000 for 9000
+ 38791 strings out of 493013
+ 711750 string characters out of 6137918
+ 915803 words of memory out of 5000000
+ 41214 multiletter control sequences out of 15000+600000
+ 97432 words of font info for 156 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  71i,26n,125p,10412b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/texlive/2016/texmf-d
 ist/fonts/enc/dvips/lm/lm-ec.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/l
-m-mathsy.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</texli
-ve/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1000.pfb></texlive/2016/texmf
--dist/fonts/type1/public/lm/lmb10.pfb></texlive/2016/texmf-dist/fonts/type1/pub
-lic/lm/lmbx12.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><
-/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></texlive/2016/texmf-
-dist/fonts/type1/public/lm/lmmi6.pfb></texlive/2016/texmf-dist/fonts/type1/publ
-ic/lm/lmmi8.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb></tex
-live/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb></texlive/2016/texmf-dist/
-fonts/type1/public/lm/lmr6.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/
-lmr8.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb></texlive/201
-6/texmf-dist/fonts/type1/public/lm/lmri12.pfb></texlive/2016/texmf-dist/fonts/t
-ype1/public/lm/lmss12.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy1
-0.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></texlive/2016/texmf-
-dist/fonts/type1/public/xypic/xyatip10.pfb></texlive/2016/texmf-dist/fonts/type
-1/public/xypic/xybtip10.pfb></texlive/2016/texmf-dist/fonts/type1/public/xypic/
-xycmat10.pfb></texlive/2016/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on notes.pdf (5 pages, 307732 bytes).
+m-mathex.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/texli
+ve/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</texlive/2016/texmf-dist/f
+onts/type1/public/esint-type1/esint10.pfb></texlive/2016/texmf-dist/fonts/type1
+/public/cbfonts/grmn1000.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lm
+b10.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></texlive/20
+16/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></texlive/2016/texmf-dist/fonts
+/type1/public/lm/lmex10.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmm
+i12.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></texlive/201
+6/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></texlive/2016/texmf-dist/fonts/ty
+pe1/public/lm/lmr10.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.p
+fb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb></texlive/2016/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb></texlive/2016/texmf-dist/fonts/type1/pub
+lic/lm/lmr9.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></te
+xlive/2016/texmf-dist/fonts/type1/public/lm/lmss12.pfb></texlive/2016/texmf-dis
+t/fonts/type1/public/lm/lmsy10.pfb></texlive/2016/texmf-dist/fonts/type1/public
+/lm/lmsy6.pfb></texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></texlive/201
+6/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></texlive/2016/texmf-dist/fo
+nts/type1/public/xypic/xybtip10.pfb></texlive/2016/texmf-dist/fonts/type1/publi
+c/xypic/xycmat10.pfb></texlive/2016/texmf-dist/fonts/type1/public/xypic/xycmbt1
+0.pfb></texlive/2016/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
+Output written on notes.pdf (9 pages, 348843 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 27189 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 28213 words of extra memory for PDF output out of 29859 (max. 10000000)
 

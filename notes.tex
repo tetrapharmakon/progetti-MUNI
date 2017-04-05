@@ -2,7 +2,7 @@
 
 \input{preambolo}
 \usepackage{kodi}
-
+\def\yon{y}
 \usetikzlibrary{arrows}
 \title{A categorical trinitarism}
 \author{Moi}
@@ -86,12 +86,16 @@ commutes for $f\colon e\to e'$.
 
 On the other hand we define $\Psi$ taking the components $\beta_e \colon \beta\colon \varinjlim_{(G\downarrow e)} Fc \to He$ and considering the compositions
 \[
-\xymatrix@C=1.5cm{
-	\varinjlim_{(G\downarrow x)} Fc \ar[r] & HGx \ar[dd]\\
-	Fx\ar[dd]\ar[ur]\ar[u]^{\iota_{(x, 1_{Gx})}} & \\
-	& HGy\\
-	Fy \ar[ur] \ar[r]_{\iota_{(y, 1_{Gy})}}& \ar[u] \varinjlim_{(G\downarrow y)} Fc \\
+\xymatrix@C=2cm{
+	Fx\ar[r]^{\iota_{(x, 1_{Gx})}}\ar[d] & \displaystyle\varinjlim_{(G\downarrow x)} Fc \ar[r]\ar[d] & HGx \ar[d] \\
+	Fy \ar[r]_{\iota_{(y, 1_{Gy})}}& \displaystyle\varinjlim_{(G\downarrow y)} Fc \ar[r] & HGy 
 }
+% \xymatrix@C=1.5cm{
+% 	\varinjlim_{(G\downarrow x)} Fc \ar[r] & HGx \ar[dd]\\
+% 	Fx\ar[dd]\ar[ur]\ar[u]^{\iota_{(x, 1_{Gx})}} & \\
+% 	& HGy\\
+% 	Fy \ar[ur] \ar[r]_{\iota_{(y, 1_{Gy})}}& \ar[u] \varinjlim_{(G\downarrow y)} Fc \\
+% }
 \]
 The inner square commutes, and proves naturality in $x\to y$; the reason is that it splits into two sub-diagrams, each of which commutes.
 \end{proof}
@@ -103,17 +107,38 @@ Dualize; define right Kan extensions $\Ran_GF$ and their universal property (how
 \end{exercise}
 \subsection{Examples}
 \begin{example}
-Let $H\le G$ a group inclusion, regarded as a functor. The category of (left) $G$-sets is identified with the category of functors $[G,\Sets]$. 
+Let $\iota\colon H\le G$ a group inclusion, regarded as a functor. The category of (left) $G$-sets is identified with the category of functors $[G,\cate{Vect}_k]$. 
 
 There exist then functors
 \[
-npoiapofa
+\xymatrix{
+	[G,\cate{Vect}_k] \ar[r]|{\iota^*} & [H,\cate{Vect}_k] \ar@<6pt>[l]^{\Lan_\iota}\ar@<-6pt>[l]_{\Ran_\iota}
+}
 \]
 given by Kan extension. Their action on objects and morphisms is given by
-\[
-fdsnpaia
-\]
+\begin{gather*}
+V \mapsto k[G]\otimes_{k[H]}V\\
+W\mapsto \hom_{k[H]}(k[G],W)
+\end{gather*}
+(the group algebra $k[G]$ is the free $k$-algebra on group elements of $G$, with multiplication $\sum_g a_g \cdot \sum_{g'} b_{g'} = \sum_h\sum_{gg'=h}a_g b_{g'}$, and similarly for $H$).
 \end{example}
+\begin{exercise}
+Prove the above statement, with the help of the following characterization for the two functors above:
+\begin{itemize}
+	\item There is an equalizer
+	\[
+	\xymatrix{
+		\hom_{k[H]}(k[G],W) \ar[r]& \hom_k(k[G],V) \ar@<6pt>[r]^(.4){\hom(1,h)}\ar@<-6pt>[r]_(.4){\hom(h,1)} & \hom_k(k[G],V)
+	}
+	\]
+	\item There is a coequalizer
+	\[
+	\xymatrix{
+		**[l]\bigoplus_{h\in H}k[G]\otimes_k V \ar@<6pt>[r]^{1\otimes h}\ar@<-6pt>[r]_{h\otimes 1} & k[G]\otimes_k V \ar[r] & k[G]\otimes_{k[H]}V.
+	}
+	\]
+\end{itemize}
+\end{exercise}
 The following is a standard statement that is often subsumed by the sentence `any functor $F$ defined on presheaves on $\C$ is uniquely determined by its action on representables'.
 \begin{example}
 Let $F:\C \to \D$ be a functor from a \emph{small} to a \emph{cocomplete} category; then there is a unique way to define a functor $\bar F : [\C^\text{op}, \Sets] \to \D$ that commutes with colimits, and that has a right adjoint $N_F$ sending an object $d\in\D$ into the functor $c\mapsto \hom(Fc,d)$. 
@@ -124,24 +149,39 @@ This left adjoint sends a presheaf $P$ into the object $\Lan_yF(P)$ in $\D$.
 It is enough to show that a natural transformation $\alpha\colon P \to N_F(d)$ determines a cocone for $(y\downarrow P) \to \C \overset{F}\to \D$: but from the commutativity of the square
 \[
 \xymatrix{
-	c \ar[d]&  Pc & \hom(Fc,d)\\
-	c' & Pc' & \hon(Fc',d)
+	c \ar[d]_\varphi&  Pc \ar[r]& \hom(Fc,d)\\
+	c' & Pc' \ar[u]^{P\varphi}\ar[r]& \hom(Fc',d)\ar[u]_{\hom(F\varphi,d)}
 }
 \]
 it follows that the triangle
 \[
 \xymatrix{
-	Fc && Fc' \\
+	Fc \ar[rr]^{F\varphi}\ar[dr]_\alpha&& Fc'\ar[dl]^{\alpha'} \\
 	&d&
 }
 \]
-commutes, and then sending $(c, x\in Pc)$ into $\alpha_c(x) \colon Fc \to d$ determines a cocone for $FU$. This concludes the proof.
+commutes, and then sending $(c, x\in Pc)$ into $\alpha_c(x) \colon Fc \to d$ determines a cocone for $FU$. This concludes the proof, once we show that this is a bijection; of course it is.
 \end{proof}
+\begin{exercise}
+Show that the above construction determines an equivalence of categories 
+\[
+\Cat(\C,\D)\xto{\qquad\text{Yan}\qquad} \cate{Adj}_\textsc{l}([\C^\opp,\Sets],\D)
+\]
+if morphisms on the right are natural transformations between lef adjoints (hint: simply show that the adjunction $\Lan_y\dashv y^*$ is an equivalence of categories).
+\end{exercise}
+\begin{exercise}
+Shape a dual statement regarding a universal property of the contravariant Yoneda embedding $\C^\opp\xto{\;y\;}[\C, \Sets]^\opp$. Is it really an independent theorem?
+\end{exercise}
 \begin{exercise}
 Show that $\Lan_1F\cong F$ and $\Ran_1F\cong F$, for every functor $F\colon \A\to \B$ (use the universal property).
 \end{exercise}
 \begin{exercise}
-Show that if $F\colon \A\to\B$, $\A$ is small, $F$ is cocontinuous and $\B$ is cocomplete, then $\Lan_F1$ (where $1\colon \B\to\B$ is the identity functor) is a left adjoint for $F$.
+Show that if $F\colon \A\to\B$ is a functor between small categories, then the following conditions are equivalent:
+\begin{itemize}
+	\item $F$ has a right adjoint;
+	\item $\Lan_F1$ exists and there is an isomorphism $\Lan_FF\cong F$;
+	\item $\Lan_F1$ exists and there is an isomorphism $\Lan_FL\cong L\circ \Lan_F1$ for any functor $L\colon \A\to \C$.
+\end{itemize}
 \end{exercise}
 \begin{exercise}
 Use the universal property to show that $G\mapsto \Lan_G$ is a pseudofunctor, by showing that for $\A\xto{F}\B, \A\xto{G}\C\xto{H}\D$ there is a uniquely determined laxity cell for composition
@@ -169,7 +209,78 @@ If we were able to solve this universal problem, we would obtain a natural isomo
 \[
 \hom(\varinjlim{}^W F,a)\cong \Nat(W, \hom(F,a)).
 \]
-for an object $\varinjlim{}^W F$ that we call the colimit of $F$ weighted by $W$.
+for an object $\varinjlim{}^W F$ that we call the colimit of $F$ weighted by $W$. A useful shorthand to denote the colimit of $F$ weighted by $W$, alternative to the ugly $\varinjlim{}^W F$, is $W\cdot F$, in such a way that its universal property is written
+\[
+\hom(W\cdot F,a)\cong \Nat(W, \hom(F,a)).
+\]
 \subsection{Examples}
+\begin{example}
+Let $W \colon * \to \Sets$ be the choice of a set $X$; let $F \colon * \to \C$ be the choice of an object $c$. A natural transformation $W\Rightarrow \hom(F,a)$ consists of a function of sets $X \to \hom(c,a)$, so that from the isomorphism
+\[
+\hom(W\cdot F,a)\cong \Sets(X, \hom(c,a))
+\]
+and the uniqueness of adjoints we deduce that 
+\[\textstyle
+W \cdot F = X \cdot c \cong \coprod_{x\in X} c
+\]
+\end{example}
+\begin{exercise}
+Generalize to the case where $W \colon J \to \Sets$ is a parametric family of sets, and $F\colon J \to \C$ a parametric family of objects.
+\end{exercise}
+\begin{example}
+Let $W\colon \{0\to 1\}\to \Sets$ be the choice of a function of sets $f : X\leftarrow Y$, and $F\colon \{0\to 1\}\to \C$ be the choice of a morphism $u : c\to c'$ in $\C$. Then a natural transformation $W\Rightarrow \hom(F,a)$ consists of a pair of functions $\alpha_\epsilon$ ($\epsilon=0,1$) such that
+\[
+\xymatrix@C=2cm{
+	X \ar[r]^{\alpha_0}& \hom(c,a)\\
+	Y \ar[u]\ar[r]_{\alpha_1}& \hom(c',a)\ar[u]
+}
+\]
+Show that $W\cdot F$ fits into a pushout diagram
+\[
+\xymatrix{
+	Y\cdot c \ar@{}[dr]|\ulcorner \ar[r]\ar[d] & Y\cdot c'\ar[d]\\
+	X \cdot c \ar[r] & W\cdot F.
+}
+\]
+\end{example}
+\begin{definition}\label{eltsf}
+Let $W\colon \C\to \Sets$ be a functor; the \emph{category of elements} $\elts{\C}{W}$ of $W$ is the category having objects the pairs $(c\in\C, u\in Wc)$, and morphisms $(c,u)\to (c',v)$ those $f\in \C(c,c')$ such that $W(f)(u)=v$.
+\end{definition}
+\begin{notat}
+The exotic notation ``$\elts{\C}{W}$'' for the category of elements of $W$ comes from the wondrous paper \cite{Graya}.
+\end{notat}
+\begin{proposition}
+The category $\elts{\C}{W}$ can be equivalently characterized as
+\begin{itemize}
+\item The category which results from the pullback 
+\[
+\xymatrix{
+  \elts{\C}{W}\ar[r]\ar[d]\ar@{}[dr]|\lrcorner & \Sets_* \ar[d]^U \\
+  \C \ar[r]_W & \Sets
+}
+\]
+where $U\colon \Sets_*\to\Sets$ is the forgetful functor which sends a pointed set to its underlying set;
+\item The comma category of the cospan $\{*\}\to \Sets \xot{W} \C$, where $\{*\}\to \Sets$ chooses the terminal object of $\Sets$;
+\item The opposite of the comma category $(\yon\downarrow \lceil W\rceil)$, where $\lceil W\rceil\colon \{*\}\to [\C, \Sets]$ is the \emph{name} of the functor $W$, \ie the unique functor choosing the presheaf $W\in [\C, \Sets]$.
+% \begin{center}
+% \includegraphics[scale=1]{figures/fig5}
+% \end{center}
+\end{itemize}
+\end{proposition}
+\begin{proposition}\label{fibelem}
+The category of elements $\elts{\C}{W}$ of a functor $W\colon \C\to \Sets$ comes equipped with a canonical ``Grothendieck fibration'' to the domain of $W$, which we denote $\Sigma\colon \elts{\C}{W}\to \C$, defined forgetting the distinguished element $u\in Wc$. 
+\end{proposition}
+\begin{remark}[\righteyes, The Grothendieck construction trivializes weights]
+The definition of weighted co/limit can be extended in the case $F\colon \C\to\A$ is a $\V$-enriched functor between $\V$-categories, and $W\colon \C\to\V$ is a $\V$-co/presheaf; this is the setting where the notion acquires a supremacy over the ``classical'' one (where the weight is the terminal presheaf). 
+
+When $\V=\Sets$, indeed, the construction sending a (co)presheaf into its category of elements turns out to trivialize the theory of weighted limits: as the following discussion shows, in such a situation every weighted limit can be expressed as a `classical' (we prefer to call them \emph{conical}, due to the shape of the weight) limit.
+\end{remark}
+\begin{proposition}[$\Sets$-weighted limits are limits]\label{elementi}
+As shown in Prop\@. \refbf{fibelem}, the category $\elts{\C}{W}$ comes equipped with a fibration $\Sigma\colon \elts{\C}{W}\to\C$; this is such that for any functor $F\colon \C\to \A$ one has 
+\[\wlim{W}F\cong \varprojlim_{(c,x)\in \elts{\C}{W}} F\circ \Sigma.\]
+\end{proposition}
+\begin{proof}
+We show that the two objects share the same universal property.
+\end{proof}
 \section{Co/ends}
 \end{document}
