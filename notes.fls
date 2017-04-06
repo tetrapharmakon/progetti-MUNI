@@ -533,8 +533,8 @@ INPUT /texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT notes.aux
 INPUT ./notes.out
 INPUT ./notes.out
-INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc

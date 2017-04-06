@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.19)  6 APR 2017 01:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.19)  6 APR 2017 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2440,14 +2440,14 @@ lmr/m/n/12 (-20) comes equipped with a fi-bra-tion $\OT1/lmr/m/n/12 (-20) ^^F [
 ] [] []  []  \OML/lmm/m/it/12 W \OMS/lmsy/m/n/12 !
  []
 
-[8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+[8] <xymatrix 2x2 154> [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
  (./notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: CCEAABFBFCC1F62B07DAB7AB22EBF097;277.
+(rerunfilecheck)             Checksum: 3D80817CBB94C5826AFE92A60D710643;339.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2457,15 +2457,15 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 38791 strings out of 493013
- 711750 string characters out of 6137918
- 915803 words of memory out of 5000000
- 41214 multiletter control sequences out of 15000+600000
- 97432 words of font info for 156 fonts, out of 8000000 for 9000
+ 38815 strings out of 493013
+ 712030 string characters out of 6137918
+ 915806 words of memory out of 5000000
+ 41215 multiletter control sequences out of 15000+600000
+ 97788 words of font info for 160 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  71i,26n,125p,10412b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/texlive/2016/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/l
+{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/texlive/2016/texmf-d
+ist/fonts/enc/dvips/lm/lm-rm.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/l
 m-mathex.enc}{/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/texli
 ve/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</texlive/2016/texmf-dist/f
 onts/type1/public/esint-type1/esint10.pfb></texlive/2016/texmf-dist/fonts/type1
@@ -2487,10 +2487,10 @@ ve/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></texlive/201
 nts/type1/public/xypic/xybtip10.pfb></texlive/2016/texmf-dist/fonts/type1/publi
 c/xypic/xycmat10.pfb></texlive/2016/texmf-dist/fonts/type1/public/xypic/xycmbt1
 0.pfb></texlive/2016/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
-Output written on notes.pdf (9 pages, 348843 bytes).
+Output written on notes.pdf (9 pages, 354846 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 28213 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 28221 words of extra memory for PDF output out of 29859 (max. 10000000)
 

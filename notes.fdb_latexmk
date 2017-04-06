@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1491436051 "notes.tex" "notes.pdf" "notes" 1491436052
+["pdflatex"] 1491437676 "notes.tex" "notes.pdf" "notes" 1491437678
   "/home/fouche/texmf/tex/generic/kodi/tikzlibrarykodi.bapto.code.tex" 1490865867 3333 055a427e9d400ef2cc23ffb77e484942 ""
   "/home/fouche/texmf/tex/generic/kodi/tikzlibrarykodi.code.tex" 1490865867 3406 1f3867a65e31a6ba4b485ed8f2e367f1 ""
   "/home/fouche/texmf/tex/generic/kodi/tikzlibrarykodi.diorthono.code.tex" 1490865867 4285 36fc5ec4fc2c6bf3cd619c8fcfc43676 ""
@@ -326,12 +326,12 @@
   "/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1487517137 2048560 af449ee6a453b60ef672891ced42e137 ""
   "/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1487517175 3869206 5e5347ddcb1066ca3833552c46f0b4d6 ""
   "/texlive/2016/texmf.cnf" 1487517117 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "notes.aux" 1491436052 1738 935fc5e3a3ae3eee18cc78097d517942 ""
-  "notes.out" 1491436052 277 cceaabfbfcc1f62b07dab7ab22ebf097 ""
-  "notes.tex" 1491436035 15506 f32e3148eaed7afe90cd6b8339cbedf0 ""
+  "notes.aux" 1491437677 1836 ab31927d4bd1ad472259c812552dec7a ""
+  "notes.out" 1491437677 339 3d80817cbb94c5826afe92a60d710643 ""
+  "notes.tex" 1491437674 16841 899f7dca62e01a0fcac2d95158bb1617 ""
   "preambolo.tex" 1491080873 10292 cf933ebd47d7d0d280fef54e920d25a5 ""
   (generated)
   "notes.aux"
-  "notes.out"
   "notes.log"
+  "notes.out"
   "notes.pdf"

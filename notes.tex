@@ -277,10 +277,61 @@ When $\V=\Sets$, indeed, the construction sending a (co)presheaf into its catego
 \end{remark}
 \begin{proposition}[$\Sets$-weighted limits are limits]\label{elementi}
 As shown in Prop\@. \refbf{fibelem}, the category $\elts{\C}{W}$ comes equipped with a fibration $\Sigma\colon \elts{\C}{W}\to\C$; this is such that for any functor $F\colon \C\to \A$ one has 
-\[\wlim{W}F\cong \varprojlim_{(c,x)\in \elts{\C}{W}} F\circ \Sigma.\]
+\[
+W\cdot F\cong \varinjlim_{(c,x)\in (\elts{\C}{W})^\opp} F\circ \Sigma^\opp.\]
 \end{proposition}
 \begin{proof}
-We show that the two objects share the same universal property.
+We show that the two objects share the same universal property: the proof is based on the fact that a natural transformation $\eta \colon  \Rightarrow \hom(F,d)$ corresponds to a cocone $F\circ\Sigma^\opp \to d$. In fact the naturality of such an $\eta$, expressed in the commutative square
+\[
+\xymatrix{
+	Wc \ar[r]& \hom(Fc,d)\\
+	Wc'\ar[u]\ar[r] & \hom(Fc',d)\ar[u]
+}
+\]
+translates into the commutativity of the triangle
+\[
+fapifna
+\]
+testifying that $\eta_{\firstblank}(\secondblank)$ are the components of a cocone
+\[
+\big\{\eta_c(x) \colon Fc = F\circ\Sigma(c,x)\to d \mid (c,x)\in\textstyle\elts{\C}{W}\big\}.
+\]
+Conversely, a cocone for $F\circ\Sigma^\opp$ does constitute a natural transformation $ \Rightarrow \hom(F,d)$, defined reading the same equivalence (between squares and triangles) backward.
 \end{proof}
 \section{Co/ends}
+The language of coends is designed to subsume the whole discussion above in the same conceptual framework.
+\begin{definition}[Dinatural transformation]
+
+\end{definition}
+\begin{definition}[Wedges and cowedges]
+
+\end{definition}
+\begin{definition}[Co/ends]
+
+\end{definition}
+\begin{proposition}[Co/ends as colimits]
+
+\end{proposition}
+\begin{remark}[Fubini]
+
+\end{remark}
+\subsection{Examples}
+\begin{example}
+
+\end{example}
+\begin{example}
+
+\end{example}
+\begin{example}
+
+\end{example}
+\begin{example}
+
+\end{example}
+\begin{example}
+
+\end{example}
+\begin{example}
+
+\end{example}
 \end{document}
